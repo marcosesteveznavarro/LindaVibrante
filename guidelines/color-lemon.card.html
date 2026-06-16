@@ -1,0 +1,30 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Lemon accent" subtitle="The citrus accent — vivid but warm, used punctually" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--surface-page); font-family:var(--font-sans); color:var(--text-strong); }
+  .wrap { padding:24px; }
+  .row { display:flex; gap:10px; }
+  .sw { flex:1; height:88px; border-radius:var(--radius-md); display:flex; align-items:flex-end; padding:10px; box-sizing:border-box; }
+  .sw span { font-size:11px; font-weight:600; letter-spacing:0.02em; }
+  .dark span { color:var(--cream-50); }
+  .light span { color:var(--ink-900); }
+  .cap { margin-top:12px; font-size:12px; color:var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row">
+      <div class="sw light" style="background:var(--lemon-100)"><span>--lemon-100</span></div>
+      <div class="sw light" style="background:var(--lemon-300)"><span>--lemon-300</span></div>
+      <div class="sw light" style="background:var(--lemon-400)"><span>--lemon-400</span></div>
+      <div class="sw light" style="background:var(--lemon-500)"><span>--lemon-500 · accent</span></div>
+      <div class="sw dark" style="background:var(--lemon-600)"><span>--lemon-600 · press</span></div>
+    </div>
+    <p class="cap">Acento, nunca protagonista. Aparece en CTAs, subrayados y guiños — no como fondo dominante.</p>
+  </div>
+</body>
+</html>

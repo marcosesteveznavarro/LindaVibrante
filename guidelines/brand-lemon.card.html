@@ -1,0 +1,40 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="El limón — uso del acento" subtitle="Guiño editorial: luz y frescura. Acento, no temática" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--surface-page); font-family:var(--font-sans); color:var(--text-strong); }
+  .wrap { padding:22px 26px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .do, .dont { border-radius:var(--radius-md); padding:16px; box-sizing:border-box; }
+  .do { background:var(--white); box-shadow:var(--shadow-sm); }
+  .dont { background:var(--white); border:1px dashed var(--border-strong); }
+  .h { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; margin:0 0 10px; display:flex; align-items:center; gap:7px; }
+  .do .h { color:var(--leaf-600); }
+  .dont .h { color:var(--danger-600); }
+  .chip { display:inline-block; font-size:12px; font-weight:600; padding:4px 11px; border-radius:999px; background:var(--lemon-100); color:var(--ink-900); border:1px solid var(--lemon-300); }
+  .underline { font-family:var(--font-display); font-size:22px; font-weight:600; }
+  .underline u { text-decoration:none; box-shadow:inset 0 -0.32em 0 var(--lemon-300); }
+  .sat { height:54px; border-radius:8px; background:repeating-linear-gradient(45deg,var(--lemon-500),var(--lemon-500) 12px,var(--lemon-400) 12px,var(--lemon-400) 24px); }
+  .p { font-size:12px; color:var(--text-muted); margin:8px 0 0; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="do">
+      <p class="h">✓ Sí — guiño de buen gusto</p>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <span class="chip">Novedad</span>
+        <span class="underline">frescura <u>cuidada</u></span>
+      </div>
+      <p class="p">Acentos puntuales: chips, subrayados, un punto, un borde.</p>
+    </div>
+    <div class="dont">
+      <p class="h">✕ No — saturación de limón</p>
+      <div class="sat"></div>
+      <p class="p">Nada de fondos amarillos dominantes ni estampados de limones.</p>
+    </div>
+  </div>
+</body>
+</html>

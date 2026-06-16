@@ -1,0 +1,97 @@
+/* ============================================================
+   LINDA VIBRANTE — COLOR  (from the real brand: logo + local)
+   Deep burgundy wordmark · dusty-rose · golden lemon · leaf green ·
+   warm cream base. The lemon stays a guiño elegante — accent, never
+   protagonist; if it reads "detalle de buen gusto", good.
+   ============================================================ */
+:root {
+  /* --- Base: warm cream / greige (the luminous canvas, from the salas) --- */
+  --cream-50:  #FBF6EF;   /* page base */
+  --cream-100: #F4ECDF;   /* raised wash */
+  --sand-200:  #EADDCB;   /* hairlines, quiet fills */
+  --sand-300:  #DAC8AF;   /* stronger border */
+  --white:     #FFFFFF;
+
+  /* --- Wine / burgundy: the primary brand colour (logo + wordmark) --- */
+  --wine-950:  #380710;
+  --wine-900:  #4C0A1B;   /* dark immersive sections */
+  --wine-800:  #5C0E22;   /* strong text / headings */
+  --wine-700:  #6A0B23;   /* PRIMARY — matches the logo */
+  --wine-600:  #80293F;
+  --wine-500:  #98475B;
+  --wine-300:  #C698A2;
+  --wine-100:  #F0E0E2;
+
+  /* --- Rose: dusty-rose secondary (the logo's paper) --- */
+  --rose-600:  #C9888A;
+  --rose-400:  #E3AFAF;   /* the brand rose */
+  --rose-300:  #ECC4C2;
+  --rose-200:  #F3D8D5;
+  --rose-100:  #F9E8E5;   /* tint wash */
+  --rose-50:   #FCF3F0;
+
+  /* --- Lemon: the accent (golden, vivid — the real lemons) --- */
+  --lemon-600: #D9B400;   /* pressed accent */
+  --lemon-500: #F7CE0A;   /* the accent */
+  --lemon-400: #FBDC45;   /* hover / lighter accent */
+  --lemon-300: #FCE885;   /* soft highlight */
+  --lemon-100: #FCF4C8;   /* citrus tint wash */
+
+  /* --- Leaf: citrus-leaf green (calm secondary, the logo leaves) --- */
+  --leaf-700:  #135A22;
+  --leaf-600:  #1B6E2A;   /* the leaf green */
+  --leaf-500:  #2E7E3C;
+  --leaf-300:  #8FB893;
+  --leaf-100:  #E0EBDC;   /* tint wash */
+
+  /* --- Ink: warm dark + dark surfaces (brand dark = deep burgundy) --- */
+  --ink-950:   #2A0710;   /* footer / darkest */
+  --ink-900:   #4C0A1B;   /* dark sections, chips, menu (= wine-900) */
+  --ink-700:   #6A0B23;   /* hover on dark (= wine-700) */
+  --ink-500:   #6E545A;   /* warm taupe (body-ish) */
+  --ink-300:   #927A80;   /* muted text */
+  --ink-200:   #BBA9AD;   /* faint / placeholders */
+
+  /* --- Functional / semantic states --- */
+  --success-600: #3E7D52;
+  --success-100: #E2F0E5;
+  --danger-600:  #B5482F;
+  --danger-100:  #F6E3DC;
+  --whatsapp:    #25D366;  /* brand green — keep recognizable */
+  --whatsapp-press: #1EB658;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in components
+     ============================================================ */
+  --surface-page:    var(--cream-50);
+  --surface-raised:  var(--cream-100);
+  --surface-card:    var(--white);
+  --surface-tint:    var(--lemon-100);
+  --surface-rose:    var(--rose-100);
+  --surface-leaf:    var(--leaf-100);
+  --surface-ink:     var(--wine-900);
+  --surface-ink-deep:var(--wine-950);
+
+  --text-strong:     var(--wine-800);   /* burgundy — headings, names, emphasis */
+  --text-body:       #5A464B;           /* warm taupe-brown */
+  --text-muted:      #8C757A;
+  --text-on-ink:     var(--cream-50);
+  --text-on-ink-muted: #D8B6BD;         /* muted rose on burgundy */
+  --text-on-accent:  var(--wine-900);   /* dark burgundy on lemon = accessible + on-brand */
+
+  --accent:          var(--lemon-500);
+  --accent-hover:    var(--lemon-400);
+  --accent-press:    var(--lemon-600);
+  --accent-soft:     var(--lemon-100);
+
+  --primary:         var(--wine-700);
+  --primary-hover:   var(--wine-600);
+  --primary-press:   var(--wine-900);
+
+  --border:          var(--sand-200);
+  --border-strong:   var(--sand-300);
+  --border-ink:      rgba(76,10,27,0.12);
+
+  --ring:            color-mix(in oklab, var(--lemon-500) 70%, transparent);
+  --focus-ring:      0 0 0 3px var(--ring);
+}

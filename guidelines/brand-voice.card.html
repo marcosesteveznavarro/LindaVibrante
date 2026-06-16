@@ -1,0 +1,35 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="Voz & tono" subtitle="Español de España · cercano, natural, con confianza profesional" -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin:0; background:var(--surface-page); font-family:var(--font-sans); color:var(--text-strong); }
+  .wrap { padding:22px 26px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .col h4 { margin:0 0 10px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.16em; }
+  .yes h4 { color:var(--leaf-600); }
+  .no h4 { color:var(--text-muted); }
+  .line { font-size:14px; line-height:1.5; margin:0 0 8px; padding-left:18px; position:relative; }
+  .yes .line::before { content:"“"; position:absolute; left:0; top:-2px; font-family:var(--font-display); font-size:22px; color:var(--lemon-500); line-height:1; }
+  .no .line { color:var(--text-muted); }
+  .no .line::before { content:"✕"; position:absolute; left:0; top:1px; font-size:11px; color:var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="col yes">
+      <h4>Así hablamos</h4>
+      <p class="line">Reserva tu cita y déjate cuidar.</p>
+      <p class="line">Te asesoramos sin compromiso, de tú a tú.</p>
+      <p class="line">En pleno centro de Vigo, junto a Plaza de España.</p>
+    </div>
+    <div class="col no">
+      <h4>Evitamos</h4>
+      <p class="line">Solicite presupuesto a través del formulario.</p>
+      <p class="line">Somos líderes en soluciones de belleza integral.</p>
+      <p class="line">¡¡Oferta!! Belleza low cost para ti 💅✨</p>
+    </div>
+  </div>
+</body>
+</html>
