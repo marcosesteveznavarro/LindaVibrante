@@ -1,35 +1,40 @@
-import React from 'react';
-import { Nav, MobileMenu, Footer } from './site/Chrome.jsx';
-import { Hero, Servicios, ElCentro, Resenas } from './site/Sections.jsx';
-import { WhatsAppFab } from './components/index.js';
-import { data as D } from './site/data.js';
-
-function useIsDesktop() {
-  const [d, setD] = React.useState(() => window.matchMedia('(min-width: 900px)').matches);
-  React.useEffect(() => {
-    const mq = window.matchMedia('(min-width: 900px)');
-    const on = () => setD(mq.matches);
-    mq.addEventListener ? mq.addEventListener('change', on) : mq.addListener(on);
-    return () => { mq.removeEventListener ? mq.removeEventListener('change', on) : mq.removeListener(on); };
-  }, []);
-  return d;
-}
+import { useEffect } from 'react';
+import Nav from './sections/Nav.jsx';
+import Hero from './sections/Hero.jsx';
+import Servicios from './sections/Servicios.jsx';
+import ElCentro from './sections/ElCentro.jsx';
+import Linda from './sections/Linda.jsx';
+import PrimeraVisita from './sections/PrimeraVisita.jsx';
+import Footer from './sections/Footer.jsx';
+import ServiceModal from './sections/ServiceModal.jsx';
+import MobileMenu from './sections/MobileMenu.jsx';
+import StickyBooking from './sections/StickyBooking.jsx';
+import TabBar from './sections/TabBar.jsx';
+import GlobalFx from './sections/GlobalFx.jsx';
+import { initSiteEffects } from './lib/effects.js';
+import { SERVICES } from './data/site.js';
 
 export default function App() {
-  const [menu, setMenu] = React.useState(false);
-  const d = useIsDesktop();
+  useEffect(() => initSiteEffects({ services: SERVICES }), []);
+
   return (
-    <React.Fragment>
-      <Nav d={d} onMenu={() => setMenu(true)} />
-      <main>
-        <Hero d={d} />
-        <Servicios d={d} />
-        <ElCentro d={d} />
-        <Resenas d={d} />
+    <>
+      <a href="#servicios" className="skip-link">Saltar al contenido</a>
+      <Nav />
+      <main id="contenido">
+        <Hero />
+        <Servicios />
+        <ElCentro />
+        <Linda />
+        <PrimeraVisita />
       </main>
-      <Footer d={d} />
-      <MobileMenu open={menu} onClose={() => setMenu(false)} />
-      <WhatsAppFab phone={D.contact.whatsapp} message="¡Hola! Me gustaría pedir información 🙂" expanded={d} style={{ position: 'fixed', right: d ? 24 : 16, bottom: d ? 24 : 16, zIndex: 50 }} />
-    </React.Fragment>
+      <Footer />
+
+      <ServiceModal />
+      <MobileMenu />
+      <StickyBooking />
+      <TabBar />
+      <GlobalFx />
+    </>
   );
 }

@@ -1,0 +1,125 @@
+/* Linda Vibrante — base reset, shared utilities, motion primitives. */
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font-family: inherit; }
+h1, h2, h3, p { margin: 0; text-wrap: pretty; }
+::selection { background: rgba(247, 206, 10, .35); color: var(--lemon-ink); }
+:focus-visible { outline: 2.5px solid var(--wine); outline-offset: 3px; border-radius: 5px; }
+::-webkit-scrollbar { width: 0; height: 0; }
+
+/* ---------- skip link (keyboard: first stop, bypasses fixed nav) ---------- */
+.skip-link {
+  position: fixed; top: 10px; left: 10px; z-index: 400;
+  transform: translateY(-150%); transition: transform .2s ease;
+  background: var(--lemon); color: var(--lemon-ink);
+  font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: var(--r-pill);
+  box-shadow: var(--sh-lemon);
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* ---------- layout utilities ---------- */
+.section { position: relative; padding: var(--pad-y) var(--pad-x); }
+.container { max-width: var(--maxw); margin: 0 auto; }
+
+/* ---------- display headings ---------- */
+.display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  line-height: 1.02;
+  color: var(--ink);
+  margin: 0;
+}
+.display em { font-style: italic; font-weight: 500; color: var(--wine); }
+/* masked line wrapper for kinetic/scroll-reveal headings */
+.line { display: block; overflow: hidden; padding-bottom: .08em; }
+.line > span { display: inline-block; }
+
+/* ---------- eyebrow ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.eyebrow__line { width: 26px; height: 1.5px; background: var(--lemon); display: inline-block; flex: none; }
+.eyebrow--light { color: var(--lemon); }
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: var(--r-pill);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+.btn--lemon { background: var(--lemon); color: var(--lemon-ink); padding: 16px 27px; box-shadow: var(--sh-lemon); }
+.btn--outline { background: transparent; color: var(--ink); padding: 15px 22px; border: 1.5px solid var(--border-2); font-weight: 600; gap: 9px; }
+.btn--sm { padding: 11px 20px; font-size: 14px; }
+[data-magnetic] { will-change: transform; }
+
+/* ---------- scroll reveal (flash-free; applied only when motion is enabled) ---------- */
+.motion [data-reveal] { opacity: 0; transform: translateY(30px); will-change: transform, opacity; }
+.motion [data-reveal="mask"] { opacity: 1; transform: translateY(110%); }
+.motion [data-reveal-img] { filter: grayscale(1) brightness(1.02); }
+.motion #heroTitle .kw { transform: translateY(118%); opacity: 0; }
+
+/* ---------- film grain overlay ---------- */
+#grain { position: fixed; inset: 0; pointer-events: none; z-index: 60; mix-blend-mode: soft-light; opacity: .3; }
+
+/* ---------- custom cursor ---------- */
+#cur {
+  position: fixed; top: 0; left: 0; width: 34px; height: 34px;
+  border: 1.5px solid rgba(106, 11, 35, .55); border-radius: 999px;
+  pointer-events: none; opacity: 0; z-index: 10000;
+  transition: opacity .3s ease, width .25s ease, height .25s ease, background .25s ease, border-color .25s ease;
+}
+#curDot {
+  position: fixed; top: 0; left: 0; width: 6px; height: 6px;
+  background: var(--ink); border-radius: 999px;
+  pointer-events: none; opacity: 0; z-index: 10000; transition: opacity .3s ease;
+}
+
+/* ---------- keyframes ---------- */
+@keyframes lvgrain {
+  0% { background-position: 0 0; } 20% { background-position: -13px 9px; }
+  40% { background-position: 9px -11px; } 60% { background-position: -8px -13px; }
+  80% { background-position: 11px 7px; } 100% { background-position: 0 0; }
+}
+@keyframes lvbreathe { 0% { transform: scale(1.02); } 100% { transform: scale(1.1); } }
+
+/* ---------- reduced motion: show everything in its final state ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+  #grain { display: none; }
+  #cur, #curDot { display: none; }
+  [data-reveal], [data-reveal="mask"], [data-reveal-img], #heroTitle .kw {
+    opacity: 1 !important; transform: none !important; filter: none !important;
+  }
+}

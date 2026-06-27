@@ -1,0 +1,130 @@
+/* ===== Linda · dueña section ===== */
+
+.linda {
+  background: var(--cream);
+}
+
+/* Grid: 0.92fr text-col / 1.08fr photo-col, centred vertically */
+.linda__grid {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+}
+
+/* ---- LEFT: photo ---- */
+.linda__photo-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.linda__photo-box {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--sh-portrait);
+  aspect-ratio: 4 / 5;
+}
+
+.linda__photo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+/* Lemon chip bottom-left */
+.linda__chip {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  background: var(--lemon);
+  color: var(--lemon-ink);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 9px 16px;
+  border-radius: var(--r-pill);
+  box-shadow: 0 10px 22px -10px rgba(0, 0, 0, .4);
+  line-height: 1;
+}
+
+/* ---- RIGHT: body ---- */
+.linda__body {
+  min-width: 0;
+}
+
+/* Heading: offset left by 3px to optically align cap */
+.linda__heading {
+  margin: 16px 0 0 -3px;
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+}
+
+/* Body paragraph */
+.linda__lead {
+  margin: 22px 0 0;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 520px;
+  text-wrap: pretty;
+}
+
+/* Italic Newsreader quote in wine */
+.linda__quote {
+  margin: 20px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  line-height: 1.32;
+  color: var(--wine);
+  max-width: 520px;
+  text-wrap: pretty;
+}
+
+/* CTA row */
+.linda__ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Instagram inline link */
+.linda__ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--border-2);
+  padding-bottom: 2px;
+  min-height: 44px;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.linda__ig-link:hover {
+  color: var(--wine);
+  border-color: var(--wine);
+}
+
+/* ---- Responsive: single column, photo above text ---- */
+@media (max-width: 959px) {
+  .linda__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Photo already first in DOM — nothing to reorder */
+  .linda__photo-box {
+    /* Limit portrait height on small screens */
+    aspect-ratio: 3 / 4;
+  }
+
+  .linda__heading {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,45 @@
+/* Linda Vibrante — design tokens (editorial citrus). Single source of truth. */
+:root {
+  /* ---------- color ---------- */
+  --cream: #FBF6EF;        /* page / hero / servicios / primera visita */
+  --cream-2: #F4ECDF;      /* "El centro" background */
+  --ink: #2A1F1A;          /* primary text / soft-dark surfaces */
+  --ink-soft: #5A464B;     /* secondary body text */
+  --muted: #806A6F;        /* eyebrows, tertiary text (AA 4.6:1 on cream) */
+  --wine: #6A0B23;         /* brand accent: emphasis, numbers, details */
+  --wine-deep: #4C0A1B;    /* contrast blocks (lemon moment, mobile menu) */
+  --wine-black: #2A0710;   /* footer background */
+  --lemon: #F7CE0A;        /* the only vivid accent: CTAs, lines, chips */
+  --lemon-ink: #3A0A18;    /* text on lemon (AA contrast) */
+  --lemon-stroke: #D9B400; /* outline for lemon numbers (primera visita) */
+  --border-1: #E7D9C5;     /* separators on cream */
+  --border-2: #E2D3BD;     /* secondary button borders */
+  --border-3: #EFE6D8;     /* very subtle separators (modal rows) */
+
+  /* ---------- type ---------- */
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* ---------- layout ---------- */
+  --maxw: 1280px;
+  --pad-y: clamp(72px, 11vh, 140px);
+  --pad-x: clamp(20px, 5vw, 72px);
+
+  /* ---------- radii ---------- */
+  --r-card: 22px;
+  --r-block: 26px;
+  --r-img: 18px;
+  --r-img-lg: 24px;
+  --r-pill: 999px;
+
+  /* ---------- shadows (all wine-tinted) ---------- */
+  --sh-card: 0 30px 70px -50px rgba(74, 10, 27, .5);
+  --sh-card-sm: 0 20px 50px -42px rgba(74, 10, 27, .5);
+  --sh-img: 0 40px 80px -46px rgba(74, 10, 27, .5);
+  --sh-portrait: 0 50px 90px -50px rgba(74, 10, 27, .55);
+  --sh-lemon: 0 14px 34px -14px rgba(247, 206, 10, .85);
+
+  /* ---------- motion ---------- */
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --dur: .45s;
+}

@@ -22,16 +22,15 @@ ehthumbs.db
 .idea/
 .vscode/
 
-# Design-tool generated metadata (kept locally, not published)
-.thumbnail
-_ds_manifest.json
-_adherence.oxlintrc.json
-
-# Internal notes & docs — not part of the public repo
+# Working files — not part of the public repo
 CLAUDE.md
 SKILL.md
 DEPLOY.md
 docs/
-*.prompt.md
-assets/README.md
 .claude/
+.review/
+app/_shots.mjs
+
+# Design handoff source + raw photos (working material, not the deliverable)
+/design_handoff_linda_vibrante/
+/assets/

@@ -1,8 +1,3 @@
-/* ============================================================
-   LINDA VIBRANTE — DESIGN SYSTEM
-   Consumers link this one file. Import-only entry point.
-   ============================================================ */
-@import url('./tokens/fonts.css');
-@import url('./tokens/colors.css');
-@import url('./tokens/typography.css');
-@import url('./tokens/spacing.css');
+/* Linda Vibrante — style entry. Tokens + base; section CSS is co-located per component. */
+@import './styles/tokens.css';
+@import './styles/base.css';

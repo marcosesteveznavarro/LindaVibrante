@@ -1,0 +1,293 @@
+/* ElCentro — section-specific styles only. Tokens + base utilities defined elsewhere. */
+
+.elcentro {
+  background: var(--cream-2);
+}
+
+/* ── Two-column grid ── */
+.elcentro__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.04fr;
+  gap: clamp(32px, 5vw, 68px);
+  align-items: center;
+}
+
+/* ── Left column ── */
+.elcentro__text {
+  min-width: 0;
+}
+
+.elcentro__h2 {
+  margin: 16px 0 0 -3px;
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+}
+
+.elcentro__lead {
+  margin: 22px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 440px;
+}
+
+/* ── Numbered values ── */
+.elcentro__values {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.elcentro__value {
+  display: flex;
+  gap: 18px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-2);
+}
+
+.elcentro__value-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--wine);
+  flex: none;
+  width: 34px;
+}
+
+.elcentro__value-title {
+  margin: 0;
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.elcentro__value-desc {
+  margin: 5px 0 0;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* ── Collage ── */
+.elcentro__collage {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+  min-height: 430px;
+}
+
+.elcentro__col-tall {
+  flex: 0.92;
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--sh-img);
+}
+
+.elcentro__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.elcentro__photo--tall {
+  position: absolute;
+  inset: 0;
+}
+
+.elcentro__chip {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(251, 246, 239, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--r-pill);
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.elcentro__chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: var(--wine);
+  flex: none;
+}
+
+.elcentro__col-right {
+  flex: 1.08;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.elcentro__photo-wrap {
+  overflow: hidden;
+}
+
+.elcentro__photo-wrap--top {
+  height: 236px;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px -42px rgba(74, 10, 27, .5);
+}
+
+.elcentro__photo-wrap--top .elcentro__photo {
+  object-position: center 58%;
+}
+
+.elcentro__bottom-row {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+  min-height: 172px;
+}
+
+.elcentro__photo-wrap--sm {
+  flex: 1;
+  border-radius: 18px;
+  box-shadow: 0 24px 50px -36px rgba(74, 10, 27, 0.5);
+}
+
+.elcentro__photo--c3 {
+  object-position: center 60%;
+}
+
+/* ── Lemon moment block ── */
+.elcentro__lemon {
+  margin-top: clamp(48px, 7vh, 84px);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-block);
+  background: var(--wine-deep);
+  color: var(--cream);
+  padding: clamp(36px, 5vw, 64px);
+}
+
+.elcentro__lemon-glow {
+  position: absolute;
+  z-index: 1;
+  right: -80px;
+  top: -80px;
+  width: 420px;
+  height: 420px;
+  border-radius: var(--r-pill);
+  background: radial-gradient(
+    circle,
+    rgba(247, 206, 10, 0.4),
+    rgba(247, 206, 10, 0.05) 60%,
+    transparent 72%
+  );
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.elcentro__lemon-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+
+.elcentro__lemon-phrase {
+  margin: 20px 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.5rem, 2.8vw, 2.05rem);
+  line-height: 1.28;
+  color: var(--cream);
+}
+
+.elcentro__lemon-word {
+  color: var(--lemon);
+}
+
+/* ── Pet friendly card ── */
+.elcentro__pet {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 30px);
+  background: #fff;
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-card);
+  padding: 14px 22px 14px 14px;
+}
+
+.elcentro__pet-img-wrap {
+  flex: none;
+  width: 104px;
+  height: 104px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.elcentro__pet-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.elcentro__pet-text {
+  min-width: 0;
+}
+
+.elcentro__pet-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.elcentro__pet-line {
+  display: inline-block;
+  width: 16px;
+  height: 1.5px;
+  background: var(--lemon);
+  flex: none;
+}
+
+.elcentro__pet-copy {
+  margin: 7px 0 0;
+  font-size: clamp(0.98rem, 1.3vw, 1.12rem);
+  line-height: 1.5;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.elcentro__pet-muted {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (max-width: 959px) {
+  .elcentro__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elcentro__collage {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .elcentro__col-tall { flex: none; height: 260px; }
+  .elcentro__col-right { flex: none; }
+  .elcentro__bottom-row { min-height: 150px; }
+
+  .elcentro__h2 {
+    margin-left: 0;
+  }
+}
