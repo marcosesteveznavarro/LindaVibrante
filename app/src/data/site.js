@@ -36,7 +36,7 @@ export const BENTO = [
   },
   {
     group: 'faciales', label: 'Faciales', title: 'Una piel que respira y luce',
-    img: 'p5', objPos: 'center 32%', opacity: 0.8, count: 8,
+    img: 'facial', objPos: 'center 30%', opacity: 0.72, count: 8,
     items: [
       { n: 'INDIBA Facial', meta: '1 h · 55 €' },
       { n: 'Limpieza facial profunda', meta: '47 €' },
@@ -45,7 +45,7 @@ export const BENTO = [
   },
   {
     group: 'mirada', label: 'Cejas & pestañas', title: 'Una mirada despierta',
-    img: 'p7', objPos: 'center 28%', opacity: 0.78, count: 7,
+    img: 'cejas', objPos: 'center 40%', opacity: 0.8, count: 7,
     items: [
       { n: 'Laminado de cejas', meta: '1 h · 30 €' },
       { n: 'Lifting de pestañas + tinte', meta: '35 €' },
@@ -54,7 +54,7 @@ export const BENTO = [
   },
   {
     group: 'manos', label: 'Manos & pies', title: 'Manos y pies a punto',
-    img: 'p1', objPos: 'center 35%', opacity: 0.78, count: 18,
+    img: 'manospies', objPos: 'center 45%', opacity: 0.65, count: 18,
     items: [
       { n: 'Manicura semipermanente', meta: '1 h · 25 €' },
       { n: 'Pedicura semipermanente', meta: '35 €' },
@@ -63,7 +63,7 @@ export const BENTO = [
   },
   {
     group: 'depilacion', label: 'Depilación', title: 'Precisa y cuidada',
-    img: 'p3', objPos: 'center 45%', opacity: 0.78, count: 10,
+    img: 'depilacion', objPos: 'center 50%', opacity: 0.8, count: 10,
     items: [
       { n: 'Ingles bikini · cera', meta: '18 €' },
       { n: 'Piernas · cera', meta: '28 €' },

@@ -197,19 +197,9 @@ export function initSiteEffects({ services } = {}) {
     cleanup.push(() => { if (raf) cancelAnimationFrame(raf); });
   })();
 
-  /* ---------- kinetic hero headline ---------- */
-  (() => {
-    const c = $('heroTitle'); if (!c) return;
-    const words = qa('#heroTitle .kw');
-    if (rm) { words.forEach((w) => { w.style.transform = 'none'; w.style.opacity = '1'; }); return; }
-    const reveal = () => words.forEach((w, i) => {
-      w.style.transition = 'transform 1.05s cubic-bezier(.16,1,.3,1) ' + (i * .12) + 's, opacity .7s ease ' + (i * .12) + 's';
-      w.style.transform = 'translateY(0)'; w.style.opacity = '1';
-    });
-    let done = false; const go = () => { if (done) return; done = true; reveal(); };
-    ready.then(() => { requestAnimationFrame(() => requestAnimationFrame(go)); });
-    setTimeout(go, 400);
-  })();
+  /* ---------- kinetic hero headline ----------
+     Handled in pure CSS (Hero.css → @keyframes lvHeroWord) so it is robust to
+     HMR / init failures and never leaves the headline stuck hidden. */
 
   /* ---------- scroll reveal ---------- */
   (() => {

@@ -17,38 +17,40 @@ export default function Hero() {
       <div id="heroGlow" className="hero__glow" aria-hidden="true" />
 
       <div className="hero__content">
-        <div className="hero__inner">
-          <span className="eyebrow"><span className="eyebrow__line" />Estética &amp; bienestar · Vigo</span>
+        <div className="hero__container">
+          <div className="hero__inner">
+            <span className="eyebrow"><span className="eyebrow__line" />Estética &amp; bienestar · Vigo</span>
 
-          <h1 id="heroTitle" className="hero__title display">
-            <span className="line"><span className="kw">Belleza que</span></span>
-            <span className="line"><span className="kw">se siente <em>cuidada</em></span></span>
-          </h1>
+            <h1 id="heroTitle" className="hero__title display">
+              <span className="line"><span className="kw">Belleza que</span></span>
+              <span className="line"><span className="kw">se siente <em>cuidada</em></span></span>
+            </h1>
 
-          <p className="hero__lead">
-            Trato cercano, atendido de tú a tú por Linda. Resultados cuidados en pleno centro de Vigo, junto a Plaza de España.
-          </p>
+            <p className="hero__lead">
+              Trato cercano, atendido de tú a tú por Linda. Resultados cuidados en pleno centro de Vigo, junto a Plaza de España.
+            </p>
 
-          <div className="hero__cta">
-            <a className="btn btn--lemon" data-magnetic href={CONTACT.booksy} target="_blank" rel="noopener">
-              Reservar cita <ArrowRight size={18} />
-            </a>
-            <a className="btn btn--outline" href={CONTACT.whatsapp} target="_blank" rel="noopener">
-              <Whatsapp size={17} /> WhatsApp
-            </a>
-          </div>
+            <div className="hero__cta">
+              <a className="btn btn--lemon" data-magnetic href={CONTACT.booksy} target="_blank" rel="noopener">
+                Reservar cita <ArrowRight size={18} />
+              </a>
+              <a className="btn btn--outline" href={CONTACT.whatsapp} target="_blank" rel="noopener">
+                <Whatsapp size={17} /> WhatsApp
+              </a>
+            </div>
 
-          <div className="hero__trust">
-            <span className="hero__rating">
-              <span className="hero__stars">
-                <Star size={15} /><Star size={15} /><Star size={15} /><Star size={15} /><Star size={15} />
+            <div className="hero__trust">
+              <span className="hero__rating">
+                <span className="hero__stars">
+                  <Star size={15} /><Star size={15} /><Star size={15} /><Star size={15} /><Star size={15} />
+                </span>
+                <b>{CONTACT.rating}</b>
               </span>
-              <b>{CONTACT.rating}</b>
-            </span>
-            <span className="hero__sep" />
-            <span className="hero__muted">{CONTACT.reviews}</span>
-            <span className="hero__sep" />
-            <span className="hero__loc"><MapPin size={16} /> {CONTACT.addressShort} · Vigo</span>
+              <span className="hero__sep" />
+              <span className="hero__muted">{CONTACT.reviews}</span>
+              <span className="hero__sep" />
+              <span className="hero__loc"><MapPin size={16} /> {CONTACT.addressShort} · Vigo</span>
+            </div>
           </div>
         </div>
       </div>

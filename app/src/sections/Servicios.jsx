@@ -1,13 +1,13 @@
 import './Servicios.css';
-import p1 from '../assets/clean/p1.jpg';
 import p2 from '../assets/clean/p2.jpg';
-import p3 from '../assets/clean/p3.jpg';
-import p5 from '../assets/clean/p5.jpg';
-import p7 from '../assets/clean/p7.jpg';
+import facial from '../assets/clean/facial.jpeg';
+import cejas from '../assets/clean/cejas.jpeg';
+import manospies from '../assets/clean/manos-pies.jpg';
+import depilacion from '../assets/clean/depilacion.jpeg';
 import { BENTO } from '../data/site.js';
 import { ArrowRight } from '../icons.jsx';
 
-const imgMap = { p1, p2, p3, p5, p7 };
+const imgMap = { p2, facial, cejas, manospies, depilacion };
 
 /* Reveal delays per card group (source order) */
 const DELAYS = { cuerpo: null, faciales: 60, mirada: 40, manos: 80, depilacion: null };
