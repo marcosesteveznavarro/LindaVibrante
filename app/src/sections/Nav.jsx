@@ -1,4 +1,4 @@
-import logoBadge from '../assets/brand/logo_badge.jpg';
+import logoBadge from '../assets/brand/logo_badge.webp';
 import { CONTACT, NAV } from '../data/site.js';
 import { Menu } from '../icons.jsx';
 import './Nav.css';

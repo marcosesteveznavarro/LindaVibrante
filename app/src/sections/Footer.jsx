@@ -1,5 +1,5 @@
 import './Footer.css';
-import escaparate from '../assets/clean/escaparate.jpg';
+import escaparate from '../assets/clean/escaparate.webp';
 import { CONTACT } from '../data/site.js';
 import { MapPin, Phone, Clock, Instagram, ArrowRight, ArrowUpRight } from '../icons.jsx';
 

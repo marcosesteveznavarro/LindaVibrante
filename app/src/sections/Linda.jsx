@@ -1,5 +1,5 @@
 import './Linda.css';
-import duena from '../assets/np2/duena.jpg';
+import duena from '../assets/np2/duena.webp';
 import { CONTACT } from '../data/site.js';
 import { ArrowRight, Instagram } from '../icons.jsx';
 

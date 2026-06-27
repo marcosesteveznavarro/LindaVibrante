@@ -1,9 +1,9 @@
 import './Servicios.css';
-import p2 from '../assets/clean/p2.jpg';
-import facial from '../assets/clean/facial.jpeg';
-import cejas from '../assets/clean/cejas.jpeg';
-import manospies from '../assets/clean/manos-pies.jpg';
-import depilacion from '../assets/clean/depilacion.jpeg';
+import p2 from '../assets/clean/p2.webp';
+import facial from '../assets/clean/facial.webp';
+import cejas from '../assets/clean/cejas.webp';
+import manospies from '../assets/clean/manos-pies.webp';
+import depilacion from '../assets/clean/depilacion.webp';
 import { BENTO } from '../data/site.js';
 import { ArrowRight } from '../icons.jsx';
 

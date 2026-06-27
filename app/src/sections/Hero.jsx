@@ -1,4 +1,4 @@
-import heroImg from '../assets/clean/p4.jpg';
+import heroImg from '../assets/clean/p4.webp';
 import { CONTACT } from '../data/site.js';
 import { ArrowRight, Whatsapp, Star, MapPin } from '../icons.jsx';
 import './Hero.css';

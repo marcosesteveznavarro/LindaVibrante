@@ -1,5 +1,5 @@
 import './PrimeraVisita.css';
-import primeraImg from '../assets/clean/primera.jpg';
+import primeraImg from '../assets/clean/primera.webp';
 import { CONTACT, PRIMERA_STEPS } from '../data/site.js';
 import { ArrowRight } from '../icons.jsx';
 

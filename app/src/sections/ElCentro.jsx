@@ -1,8 +1,8 @@
-import centro1 from '../assets/clean/centro1.jpg';
-import centro2 from '../assets/clean/centro2.jpg';
-import centro3 from '../assets/clean/centro3.jpg';
-import centro4 from '../assets/clean/centro4.jpg';
-import petCrop from '../assets/brand/pet_crop.jpg';
+import centro1 from '../assets/clean/centro1.webp';
+import centro2 from '../assets/clean/centro2.webp';
+import centro3 from '../assets/clean/centro3.webp';
+import centro4 from '../assets/clean/centro4.webp';
+import petCrop from '../assets/brand/pet_crop.webp';
 import { CENTRO_VALUES } from '../data/site.js';
 import './ElCentro.css';
 
